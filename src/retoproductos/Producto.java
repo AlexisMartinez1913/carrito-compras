@@ -71,7 +71,8 @@ public class Producto {
             totalPagar -= descuento;
         }
 
-        System.out.println("El costo total de la transacción es: " + totalPagar);
+        System.out.println("El costo total  es: " + totalPagar);
+        System.out.println("Por tener mas de 5 productos tuviste un descuento de: " +descuento);
     }
    
     
