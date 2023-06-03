@@ -78,7 +78,7 @@ public class Producto {
                  totalPagar -= descuento;
            }
         
-        System.out.println("El descuento es: " + descuento);
+        System.out.println("El descuento que tienes es: " + descuento);
         System.out.println("El costo total  es: " + totalPagar);
         
        
