@@ -26,6 +26,7 @@ public class RetoProductos {
         Scanner objread = new Scanner(System.in);
         boolean entrada = true;
         int opcion;
+        //objeto de la clase
         Producto p1 = new Producto();
         
         
@@ -55,6 +56,7 @@ public class RetoProductos {
                     p1.limpiar();
                     break;
                 case 5:
+                    System.out.println("Chao!");
                     entrada = false;
                     break;
                 default:

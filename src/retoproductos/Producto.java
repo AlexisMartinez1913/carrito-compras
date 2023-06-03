@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Globant
+ * @author grupo 5
  */
 public class Producto {
     
@@ -12,13 +12,18 @@ public class Producto {
     double []precioUnitario;
     int[]cantidadProd;
     int cont;
+    double descuento;
+    int cant;
     private static final int maxProductos = 100;
-
+    
+  //contsructor
     public Producto() {
         nombre = new String[maxProductos];
         precioUnitario = new double[maxProductos];
         cantidadProd = new int[maxProductos];
+        cant = 0;
         cont = 0;
+        descuento = 0;
         
     }
     
@@ -29,7 +34,7 @@ public class Producto {
         System.out.println("Ingrese el nombre del producto: ");
         String nom = scanner.next();
         System.out.println("Ingrese la cantidad de productos a agregar: ");
-        int cant = scanner.nextInt();
+        cant = scanner.nextInt();
         System.out.print("Ingrese el precio unitario: ");
         double precio = scanner.nextInt();
 
@@ -60,18 +65,22 @@ public class Producto {
         cont = 0;
         System.out.println("El carrito ha sido limpiado");
     }
+    
+    //calcular costos totales
     public void total(){
         double totalPagar = 0;
         for(int i = 0; i<cont;i++){
             totalPagar += precioUnitario[i]*cantidadProd[i];
-            
+           
         }
-        if (cont > 5) {
-            double descuento = totalPagar * 0.1;
-            totalPagar -= descuento;
-        }
-
+          if (cant > 5) {
+                 descuento = totalPagar *0.1;
+                 totalPagar -= descuento;
+           }
+        
+        System.out.println("El descuento es: " + descuento);
         System.out.println("El costo total  es: " + totalPagar);
+        
        
     }
    
